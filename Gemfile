@@ -8,7 +8,7 @@ gem 'sass-rails', '6.0.0'
 gem 'webpacker',  '5.2.1'
 gem 'turbolinks', '5.2.1'
 gem 'jbuilder',   '2.10.0'
-gem 'bootsnap',   '1.7.3'
+gem 'bootsnap', require: false
 gem 'msgpack',    '1.4.2'
 
 group :development, :test do
