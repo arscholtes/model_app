@@ -1,6 +1,3 @@
-/Users/onyx/.rvm/rubies/ruby-3.0.0/lib/ruby/3.0.0/tmpdir.rb:118: warning: already initialized constant Dir::Tmpname::UNUSABLE_CHARS
-/Users/onyx/.rvm/gems/ruby-3.0.0/gems/tmpdir-0.1.2/lib/tmpdir.rb:118: warning: previous definition of UNUSABLE_CHARS was here
-/Users/onyx/.rvm/rubies/ruby-3.0.0/lib/ruby/3.0.0/tmpdir.rb:120: warning: already initialized constant Dir::Tmpname::RANDOM
-/Users/onyx/.rvm/gems/ruby-3.0.0/gems/tmpdir-0.1.2/lib/tmpdir.rb:120: warning: previous definition of RANDOM was here
+ - look up rails guard gem for more advanced and automatic testing.
 
-^ rails s command is spitting this out but it is still running correctly after getting testing working.
+Notes on applicationhelpers are in notebook.
