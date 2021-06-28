@@ -11,7 +11,7 @@ gem 'jbuilder',   '2.10.0'
 gem 'bootsnap',   '1.7.2', require: false
 gem 'rexml'
 gem 'guard-minitest'
-gem 'guard' # So for some reason I have not been able to get automated testing working. Moving on to Chapter 4, will be back for this later.
+#gem 'guard' # So for some reason I have not been able to get automated testing working. Moving on to Chapter 4, will be back for this later.
 
 group :development, :test do
   gem 'sqlite3', '1.4.2'
@@ -30,7 +30,8 @@ group :test do
   gem 'capybara',           '3.35.3'
   gem 'selenium-webdriver', '3.142.7'
   gem 'webdrivers',         '4.6.0'
-  gem 'minitest'
+  gem 'minitest', group: :test
+  gem 'minitest-reporters', group: :test
 end
 
 group :production do
