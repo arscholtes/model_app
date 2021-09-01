@@ -1,14 +1,20 @@
-<h1>About</h1>
-<p>
-  The
-  <a href="https://www.railstutorial.org/"><em>Ruby on Rails Tutorial</em></a>
-  , part of the
-  <a href="https://www.learnenough.com/">Learn Enough</a>
-  family of tutorials, is a
-  <a href="https://www.railstutorial.org/book">book</a>
-  and
-  <a href="https://screencasts.railstutorial.org/">screencast series</a>
-  to teach web development with
-  <a href="https://rubyonrails.org/">Ruby on Rails</a>
-  .   This is the sample app for the tutorial.
-</p>
+<div class='center jumbotron'>
+  <% provide(:title, 'About') %>
+  <h1>About</h1>
+  <p>
+      The
+    <a href="https://www.railstutorial.org/"><em>Ruby on Rails Tutorial</em></a>
+      , part of the
+    <a href="https://www.learnenough.com/">Learn Enough</a>
+      family of tutorials, is a
+    <a href="https://www.railstutorial.org/book">book</a>
+      and
+    <a href="https://screencasts.railstutorial.org/">screencast series</a>
+      to teach web development with
+    <a href="https://rubyonrails.org/">Ruby on Rails</a>
+      .   This is the sample app for the tutorial.
+  </p>
+  <%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
+  </div>
+  <%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200"),
+                      "https://rubyonrails.org/" %>
