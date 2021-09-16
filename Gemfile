@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'bootsnap', '1.7.2', require: false
 gem 'bcrypt',   '3.1.13'
+gem 'bootsnap', '1.7.2', require: false
 gem 'bootstrap-sass', '3.4.1'
 gem 'guard-minitest'
 gem 'jbuilder', '2.10.0'
