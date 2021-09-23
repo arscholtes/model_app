@@ -9,7 +9,7 @@
     <body>
       <%= render 'layouts/header' %>
       <div class="container">
-        
+
       <!--  < % if flash.any? %>
         < % flash.keys.each do |flash_key|%>
         < % next if flash_key.to_s == 'timedout' %>
@@ -23,6 +23,7 @@
       <% flash.each do |message_type, message| %>
         <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
       <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <a class="close" data-dismiss="alert" href="#"> x</a>
       <% end %>
         <%= yield %>
         <%= render 'layouts/footer' %>
