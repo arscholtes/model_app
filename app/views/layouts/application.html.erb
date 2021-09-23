@@ -9,9 +9,20 @@
     <body>
       <%= render 'layouts/header' %>
       <div class="container">
-        <% flash.each do |message_type, message| %>
+        
+      <!--  < % if flash.any? %>
+        < % flash.keys.each do |flash_key|%>
+        < % next if flash_key.to_s == 'timedout' %>
+        <div class="alert-message < %= flash_key %>">
+          <a class="close" data-dismiss="alert" href="#"> x</a>
+          < %= flash.discard(flash_key) %>
+          < % end %>-->
+      <!-- This is the original code, it is rendering double flash boxes for some reason so -->
+      <!--  above is a way I found that only renders once | Just Kidding this doesn't work. -->
+
+      <% flash.each do |message_type, message| %>
         <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
       <% end %>
         <%= yield %>
         <%= render 'layouts/footer' %>
