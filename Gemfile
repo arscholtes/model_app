@@ -7,6 +7,7 @@ gem 'bootstrap-sass',       '3.4.1'
 
 gem 'guard-minitest'
 gem 'jbuilder',             '2.10.0'
+gem 'nokogiri',             '1.12.4'
 gem 'puma',                 '5.2.2'
 gem 'rails',                '6.1.4'
 gem 'rexml'
