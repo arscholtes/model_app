@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# bin/dev        start the app in Docker on http://localhost:${MODEL_APP_PORT:-3010}
+# bin/dev test   run the test suite in the same image
+set -euo pipefail
+cd "$(dirname "$0")/.."
+if [[ "${1:-}" = "test" ]]; then
+  shift
+  exec docker compose run --rm app sh -c 'bin/rails db:prepare && bin/rails test "$@"' sh "$@"
+fi
+exec docker compose up --build "$@"

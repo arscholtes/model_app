@@ -1,0 +1,22 @@
+# One command from this repo: bin/dev. The suite: bin/dev test.
+services:
+  app:
+    build:
+      context: .
+      target: dev
+    # Loopback only: a dev server is not something to offer the LAN or the tailnet.
+    ports:
+      - "127.0.0.1:${MODEL_APP_PORT:-3010}:3000"
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      # Source is bind-mounted so edits show without a rebuild. Gems live in the
+      # image outside /app; node_modules would be hidden by the bind mount, so it
+      # keeps a named volume, and nothing installed for Linux lands in the repo.
+      # After changing package.json: docker compose down -v, then bin/dev.
+      - .:/app
+      - node_modules:/app/node_modules
+
+volumes:
+  node_modules:
