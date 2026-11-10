@@ -30,8 +30,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     end
   follow_redirect!
   assert_template 'users/show'
-  assert_select   '#error_explanation'
-  assert_select   '.field_with_errors'
   assert_not      flash.empty?
   end
 end
